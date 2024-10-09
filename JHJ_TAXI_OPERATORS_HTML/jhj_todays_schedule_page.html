@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JHJ Taxi</title>
+    <link rel="stylesheet" href="CSS/xperimental.css">
+</head>
+<body>
+
+    <div class="header" id="header">
+        <div class="left-content">
+            <a href="jhj_homepage.html"><img class="logo" src="Images/logo.png" alt="Logo"></a>
+        </div>
+        <a href="jhj_homepage.html"><span>🏠 Home</span></a>
+        <h1>JHJ Taxi</h1>
+        <input type="text" class="search-bar" placeholder="Search...">
+    </div>
+        <div class="more_info">
+            <h1>More Information:</h1>
+
+            <label for="sortSelect">Sort By:</label>
+            <select id="sortSelect" onchange="sortTable()">
+                <option value="0">Unit #</option>
+                <option value="1">Driver's Name</option>
+                <option value="2">Alternative Driver's Name</option>
+                <option value="3">Plate #</option>
+            </select>
+
+            <table id="driverTable">
+                <thead>
+                    <tr>
+                        <th>Unit #</th>
+                        <th>Driver's Name</th>
+                        <th>Alternative Driver's Name</th>
+                        <th>Plate #</th>
+                        <th>Coding</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>#001</td>
+                        <td>Polking, Jich</td>
+                        <td>Smith, Jane</td>
+                        <td>ABC-123</td>
+                        <td>Monday</td>
+                    </tr>
+                    <tr>
+                        <td>#002</td>
+                        <td>Golsing, Haller</td>
+                        <td>Brown, Tom</td>
+                        <td>XYZ-456</td>
+                        <td>Tuesday</td>
+                    </tr>
+                    <tr>
+                        <td>#003</td>
+                        <td>Baucan, Jeremy</td>
+                        <td>Green, Susan</td>
+                        <td>PQR-789</td>
+                        <td>Wednesday</td>
+                    </tr>
+                    <tr>
+                        <td>#004</td>
+                        <td>White, Anna</td>
+                        <td>Black, Chris</td>
+                        <td>DEF-012</td>
+                        <td>Thursday</td>
+                    </tr>
+                    <tr>
+                        <td>#005</td>
+                        <td>Taylor, Lisa</td>
+                        <td>Hall, James</td>
+                        <td>GHI-345</td>
+                        <td>Friday</td>
+                    </tr>
+                    <tr>
+                        <td>#006</td>
+                        <td>Pine, Chris</td>
+                        <td>Winslet, Kate</td>
+                        <td>JKL-678</td>
+                        <td>Monday</td>
+                    </tr>
+                    <tr>
+                        <td>#007</td>
+                        <td>Alba, Jessica</td>
+                        <td>Jordan, Michael B.</td>
+                        <td>MNO-901</td>
+                        <td>Tuesday</td>
+                    </tr>
+                    <tr>
+                        <td>#008</td>
+                        <td>Reynolds, Ryan</td>
+                        <td>Johansson, Scarlett</td>
+                        <td>PQR-234</td>
+                        <td>Wednesday</td>
+                    </tr>
+                    <tr>
+                        <td>#009</td>
+                        <td>Watson, Emma</td>
+                        <td>Radcliffe, Daniel</td>
+                        <td>STU-567</td>
+                        <td>Thursday</td>
+                    </tr>
+                    <tr>
+                        <td>#010</td>
+                        <td>Hardy, Tom</td>
+                        <td>Hathaway, Anne</td>
+                        <td>VWX-890</td>
+                        <td>Friday</td>
+                    </tr>
+                    <tr>
+                        <td>#011</td>
+                        <td>Affleck, Ben</td>
+                        <td>Gadot, Gal</td>
+                        <td>YZA-123</td>
+                        <td>Monday</td>
+                    </tr>
+                    <tr>
+                        <td>#012</td>
+                        <td>Cavill, Henry</td>
+                        <td>Robbie, Margot</td>
+                        <td>BCD-456</td>
+                        <td>Tuesday</td>
+                    </tr>
+                    <tr>
+                        <td>#013</td>
+                        <td>Hemsworth, Chris</td>
+                        <td>Hiddleston, Tom</td>
+                        <td>EFG-789</td>
+                        <td>Wednesday</td>
+                    </tr>
+                    <tr>
+                        <td>#014</td>
+                        <td>Larson, Brie</td>
+                        <td>Jackson, Samuel L.</td>
+                        <td>HIJ-012</td>
+                        <td>Thursday</td>
+                    </tr>
+                    <tr>
+                        <td>#015</td>
+                        <td>Fassbender, Michael</td>
+                        <td>Vikander, Alicia</td>
+                        <td>KLM-345</td>
+                        <td>Friday</td>
+                    </tr>
+                    <tr>
+                        <td>#016</td>
+                        <td>Theron, Charlize</td>
+                        <td>Statham, Jason</td>
+                        <td>NOP-678</td>
+                        <td>Monday</td>
+                    </tr>
+                    <tr>
+                        <td>#017</td>
+                        <td>Smith, Will</td>
+                        <td>Smith, Jada Pinkett</td>
+                        <td>QRS-901</td>
+                        <td>Tuesday</td>
+                    </tr>
+                    <tr>
+                        <td>#018</td>
+                        <td>Reeves, Keanu</td>
+                        <td>Moss, Carrie-Anne</td>
+                        <td>TUV-234</td>
+                        <td>Wednesday</td>
+                    </tr>
+                    <tr>
+                        <td>#019</td>
+                        <td>Jackman, Hugh</td>
+                        <td>Ferguson, Rebecca</td>
+                        <td>WXY-567</td>
+                        <td>Thursday</td>
+                    </tr>
+                    <tr>
+                        <td>#020</td>
+                        <td>Portman, Natalie</td>
+                        <td>McGregor, Ewan</td>
+                        <td>ZAB-890</td>
+                        <td>Friday</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="jhj_taxi_operators_js.js"></script>
+</body>
+</html>

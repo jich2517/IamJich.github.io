@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log-in</title>
+    <link rel="stylesheet" href="CSS/jhj_taxi_operators.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="left-content">
+            <img class="logo" src="Images/logo.png" alt="Logo">
+        </div>
+        <h1>JHJ Taxi</h1>
+        <nav class="nav">
+            <div class="dropdowns">
+                <select id="theme-select">
+                    <option value="green-apple">Green Apple</option>
+                    <option value="lavender">Lavender</option>
+                    <option value="yotsuba">Yotsuba</option>
+                </select>
+                <select id="mode-select">
+                    <option value="light">Light Mode</option>
+                    <option value="dark">Dark Mode</option>
+                </select>
+            </div>
+        </nav>
+    </header>
+    <div class="main">
+        <form action="#" onsubmit="return validateLogin()">
+            <fieldset class="login_signin">
+                <h1>Log-in</h1>
+                <input type="text" id="loginUsername" placeholder="Username" required><br>
+                <input type="password" id="loginPassword" placeholder="Password" required><br>
+                <p><a href="#">Forgot password?</a></p><br>
+                <input type="submit" value="Log-In">
+                <p>Don't have an account? <a href="jhj_sign-in.html">Sign-in</a></p>
+            </fieldset>
+        </form>
+    
+    <script src="jhj_taxi_operators_js.js"></script>
+    <script>
+        // Call this function when the page loads to prefill login form
+        prefillLoginForm();
+    </script>
+
+</body>
+</html>

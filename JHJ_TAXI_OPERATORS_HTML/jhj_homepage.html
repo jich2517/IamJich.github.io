@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JHJ Taxi</title>
+    <link rel="stylesheet" href="CSS/jhj_taxi_operators.css">
+</head>
+<body>
+
+    <div class="header" id="header">
+        <div class="left-content">
+            <a href="jhj_homepage.html"><img class="logo" src="Images/logo.png" alt="Logo"></a>
+        </div>
+        <a href="jhj_homepage.html" class="home"><span>🏠 Home</span></a>
+        <h1>JHJ Taxi</h1>
+        <input type="text" class="search-bar" placeholder="Search...">
+
+        <img src="Images/user_profile_default.jpg" id="showChoicesButton" class="profile">
+        <div id="choicesBox" class="choices">
+            <a href="../jhj_taxi_operators_welcome.html"><span>Log-Out</span></a>
+        </div>
+    </div>
+    <abbr title="Hide/Show Side Panel"><button class="toggle-button" id="toggleButton">⬅️</button></abbr>
+
+    <div class="container">
+        <div class="items">
+            <div class="sidebar" id="sidebar">
+                <a href="#today's_schedule"><i>📅</i><span>Today's Schedules</span></a>
+                <a href="#boundaries"><i>💰</i><span>Boundaries</span></a>
+                <a href="#units"><i>🚗</i><span>Units</span></a>
+                <a href="#drivers"><i>👤</i><span>Drivers</span></a>
+                <a href="#records"><i>📄</i><span>Records</span></a>
+                <a href="#gallery"><i>🖼️</i><span>Gallery</span></a>
+                <a href="#settings"><i>⚙️</i><span>Settings</span></a>
+            </div>
+        </div>
+
+        <div class="content">
+            <fieldset id="today's_schedule">
+                <legend>TODAY'S SCHEDULE:</legend>
+                <p><b>Date: </b><span id="currentDate"></span></p>
+                <div id="firstFive" class="schedule-section">
+                    <table id="scheduleTable">
+                        <thead>
+                            <tr>
+                                <th>Unit #</th>
+                                <th>Driver Name</th>
+                                <th>Alternative Driver Name</th>
+                                <th>Plate #</th>
+                            </tr>
+                        </thead>
+                        <tbody id="driverSchedule">
+                            <!-- Rows will be inserted here by JavaScript -->
+                        </tbody>
+                    </table>
+                    <a class="see-more" id="seeMoreBtn">See More > </a>
+                    <a class="see-less hidden" id="seeLessBtn">Show Less < </a>
+                </div>
+            </fieldset>
+
+            <fieldset id="boundaries">
+                <legend>BOUNDARIES:</legend>
+                <table id="boundariesTable">
+                    <thead>
+                        <tr>
+                            <th>Driver Name</th>
+                            <th>Boundary/Money (Php)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Polking, Jich</td><td><input type="number" placeholder="Enter Amount"></td></tr>
+                        <tr><td>Golsing, Haller</td><td><input type="number" placeholder="Enter Amount"></td></tr>
+                        <tr><td>Baucan, Jeremy</td><td><input type="number" placeholder="Enter Amount"></td></tr>
+                        <tr><td>Driver 4</td><td><input type="number" placeholder="Enter Amount"></td></tr>
+                        <tr><td>Driver 5</td><td><input type="number" placeholder="Enter Amount"></td></tr>
+                    </tbody>
+                </table>
+            </fieldset>
+
+            <fieldset id="units">
+                <legend>UNITS:</legend>
+                <a href="jhj_add.html"><abbr title="Add Units"><button class="add-button">+</button></abbr></a>
+                <table id="unitsTable">
+                    <thead>
+                        <tr>
+                            <th>Unit #</th>
+                            <th>Plate #</th>
+                            <th>Driver Name</th>
+                            <th>Alternative Driver Name</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>#001</td><td>ABC-123</td><td>Polking, Jich</td><td>Smith, Jane</td></tr>
+                        <tr><td>#002</td><td>XYZ-456</td><td>Golsing, Haller</td><td>Brown, Tom</td></tr>
+                        <tr><td>#003</td><td>PQR-789</td><td>Baucan, Jeremy</td><td>Green, Susan</td></tr>
+                        <tr><td>#004</td><td>DEF-012</td><td>White, Anna</td><td>Black, Chris</td></tr>
+                        <tr><td>#005</td><td>GHI-345</td><td>Taylor, Lisa</td><td>Hall, James</td></tr>
+                    </tbody>
+                </table>
+                
+                <a href="jhj_more_info_page.html"><span class="see-more">See more ></span></a>
+            </fieldset>
+
+            <fieldset id="drivers" class="drivers">
+                <legend>DRIVERS:</legend>
+                <a href="jhj_add.html"><abbr title="Add Driver"><button class="add-button">+</button></abbr></a>
+
+                <fieldset class="driver-profile">
+                    <img src="Images/459346292_1172487267156212_2883374078259706850_n.jpg" alt="Driver Image" class="driver-image">
+                    <div class="driver-details">
+                        <strong>Name:</strong> Polking, Jich<br>
+                        <strong>Age:</strong> 38<br>
+                        <strong>Address:</strong> 123 Main St, City A<br>
+                        <strong>Unit Handled:</strong> Unit #001<br>
+                        <strong>License No.:</strong> A01-23-456789
+                    </div>
+                </fieldset>
+        
+                <fieldset class="driver-profile">
+                    <img src="Images/pm_1709970780526_cmp_1.jpg" alt="Driver Image" class="driver-image">
+                    <div class="driver-details">
+                        <strong>Name:</strong> Golsing, Haller<br>
+                        <strong>Age:</strong> 40<br>
+                        <strong>Address:</strong> 456 Side St, City B<br>
+                        <strong>Unit Handled:</strong> Unit #002<br>
+                        <strong>License No.:</strong> A02-23-456790
+                    </div>
+                </fieldset>
+        
+                <fieldset class="driver-profile">
+                    <img src="Images/459437164_2650301388477549_21174017789693804_n.jpg" alt="Driver Image" class="driver-image">
+                    <div class="driver-details">
+                        <strong>Name:</strong> Baucan, Jeremy<br>
+                        <strong>Age:</strong> 35<br>
+                        <strong>Address:</strong> 789 Back St, City C<br>
+                        <strong>Unit Handled:</strong> Unit #003<br>
+                        <strong>License No.:</strong> A03-23-456791
+                    </div>
+                </fieldset>
+        
+                <fieldset class="driver-profile">
+                    <img src="Images/1535791.png" alt="Driver Image" class="driver-image">
+                    <div class="driver-details">
+                        <strong>Name:</strong> White, Anna<br>
+                        <strong>Age:</strong> 30<br>
+                        <strong>Address:</strong> 321 Front St, City D<br>
+                        <strong>Unit Handled:</strong> Unit #004<br>
+                        <strong>License No.:</strong> A04-23-456792
+                    </div>
+                </fieldset>
+        
+                <fieldset class="driver-profile">
+                    <img src="Images/1535791.png" alt="Driver Image" class="driver-image">
+                    <div class="driver-details">
+                        <strong>Name:</strong> Taylor, Lisa<br>
+                        <strong>Age:</strong> 28<br>
+                        <strong>Address:</strong> 654 High St, City E<br>
+                        <strong>Unit Handled:</strong> Unit #005<br>
+                        <strong>License No.:</strong> A05-23-456793
+                    </div>
+                </fieldset>
+                <a href="jhj_drivers.html"><span class="see-more">See more ></span></a>
+            </fieldset>
+
+            <fieldset id="records">
+                <legend>RECORDS:</legend>
+                <fieldset>
+                    <legend>John Doe</legend>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Month</th>
+                                <th>Income</th>
+                                <th>Expenses Description</th>
+                                <th>Expenses Amount</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>August</td>
+                                <td>₱137,500</td>
+                                <td>Fuel</td>
+                                <td>₱27,500</td>
+                            </tr>
+                            <tr>
+                                <td>July</td>
+                                <td>₱165,000</td>
+                                <td>Maintenance</td>
+                                <td>₱38,500</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </fieldset>
+            
+                <fieldset>
+                    <legend>Jane Smith</legend>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Month</th>
+                                <th>Income</th>
+                                <th>Expenses Description</th>
+                                <th>Expenses Amount</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>August</td>
+                                <td>₱154,000</td>
+                                <td>Repair</td>
+                                <td>₱33,000</td>
+                            </tr>
+                            <tr>
+                                <td>July</td>
+                                <td>₱121,000</td>
+                                <td>Fuel</td>
+                                <td>₱22,000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </fieldset>
+            
+                <fieldset>
+                    <legend>Emily Davis</legend>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Month</th>
+                                <th>Income</th>
+                                <th>Expenses Description</th>
+                                <th>Expenses Amount</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>August</td>
+                                <td>₱176,000</td>
+                                <td>Insurance</td>
+                                <td>₱16,500</td>
+                            </tr>
+                            <tr>
+                                <td>July</td>
+                                <td>₱159,500</td>
+                                <td>Fuel</td>
+                                <td>₱27,500</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </fieldset>
+            
+                </table>
+                <a href="jhj_records_page.html"><span class="see-more">See more ></span></a>
+            </fieldset>
+
+            <fieldset id="gallery">
+                <legend>IMAGE GALLERY:</legend>
+                <div id="counter">1/11</div>
+                <div id="gallery-container">
+                    <button onclick="previousImage()" class="img_btn">Previous</button>
+                    <fieldset>
+                        <img id="gallery-image" src="Images/pm_1709970780526_cmp_1.jpg" alt="Image Gallery">
+                    </fieldset>
+                    <button onclick="nextImage()" class="img_btn">Next</button>
+                </div>
+            </fieldset>
+
+            <fieldset id="settings">
+                <legend>SETTINGS:</legend>
+                <h3>Appearance:</h3>
+                <nav class="nav">
+                    <div class="dropdowns">
+                        <select id="theme-select">
+                            <option value="green-apple">Green Apple</option>
+                            <option value="lavender">Lavender</option>
+                            <option value="yotsuba">Yotsuba</option>
+                        </select>
+                        <select id="mode-select">
+                            <option value="light">Light Mode</option>
+                            <option value="dark">Dark Mode</option>
+                        </select>
+                    </div>
+                </nav>
+            </fieldset>
+        </div>
+    </div>
+
+    <script src="jhj_taxi_operators_js.js"></script>
+</body>
+</html>

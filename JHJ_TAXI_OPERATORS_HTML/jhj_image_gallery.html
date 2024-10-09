@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <style>
+        /* Style for the image container */
+        #image-container {
+            width: 300px;
+            height: 200px;
+            margin: 20px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Style for images */
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        /* Style for buttons */
+        .gallery-btn {
+            margin: 10px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="image-container">
+        <img id="gallery-image" src="image1.jpg" alt="Gallery Image">
+    </div>
+
+    <div style="text-align: center;">
+        <button id="prev-btn" class="gallery-btn">Previous</button>
+        <button id="next-btn" class="gallery-btn">Next</button>
+    </div>
+
+    <script>
+        // Array of image sources
+        const images = ['image1.jpg', 'image2.jpg', 'image3.jpg', 'image4.jpg'];  // Add your images here
+        let currentIndex = 0;
+
+        // Get references to DOM elements
+        const imageElement = document.getElementById('gallery-image');
+        const nextBtn = document.getElementById('next-btn');
+        const prevBtn = document.getElementById('prev-btn');
+
+        // Function to update the displayed image
+        function updateImage() {
+            imageElement.src = images[currentIndex];
+        }
+
+        // Next button event listener
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % images.length;  // Wrap around to the first image
+            updateImage();
+        });
+
+        // Previous button event listener
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;  // Wrap around to the last image
+            updateImage();
+        });
+    </script>
+
+</body>
+</html>

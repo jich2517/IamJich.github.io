@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JHJ Taxi</title>
+    <link rel="stylesheet" href="CSS/jhj_taxi_operators.css">
+</head>
+<body>
+
+    <div class="header" id="header">
+        <div class="left-content">
+            <a href="jhj_homepage.html"><img class="logo" src="Images/logo.png" alt="Logo"></a>
+        </div>
+        <a href="jhj_homepage.html" class="home"><span>🏠 Home</span></a>
+        <h1>JHJ Taxi</h1>
+        <input type="text" class="search-bar" placeholder="Search...">
+    </div>
+    <div class="more_info">
+        <form>
+            <fieldset class="login_signin">
+                <h1>Add Unit:</h1>
+                <input type="text" id="plate_no" placeholder="Plate Number" required><br>
+                <a href="#add_driver"><button>Add Driver/s</button></a>
+            </fieldset>
+        </form>
+        <form>
+            <fieldset class="login_signin">
+                <h1>Add Driver:</h1>
+                <input type="text" id="driver_fname" placeholder="First Name" required><br>
+                <input type="text" id="driver_lname" placeholder="Last Name" required><br>
+                <input type="text" id="driver_mname" placeholder="Middle Name" required><br>
+                <input type="text" id="driver_ename" placeholder="Extension (N/A if none)" required><br>
+                <input type="tel" id="driver_cnumber" placeholder="Cellphone #" required><br>
+                <input type="number" id="driver_liscence" placeholder="Liscence #" required><br>
+                <input type="text" id="driver_address" placeholder="Address" required><br>
+                <a href="#add_driver"><button>Add Driver/s</button></a>
+            </fieldset>
+        </form>
+    </div>
+    <script src="jhj_taxi_operators_js.js"></script>
+</body>
+</html>

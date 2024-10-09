@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log-in</title>
+    <link rel="stylesheet" href="CSS/jhj_taxi_operators.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="left-content">
+            <img class="logo" src="Images/logo.png" alt="Logo">
+        </div>
+        <h1>JHJ Taxi</h1>
+        <nav class="nav">
+            <div class="dropdowns">
+                <select id="theme-select">
+                    <option value="green-apple">Green Apple</option>
+                    <option value="lavender">Lavender</option>
+                    <option value="yotsuba">Yotsuba</option>
+                </select>
+                <select id="mode-select">
+                    <option value="light">Light Mode</option>
+                    <option value="dark">Dark Mode</option>
+                </select>
+            </div>
+        </nav>
+    </header>
+    <div class="main">
+        <form onsubmit="return validateAndStore()">
+            <fieldset class="login_signin">
+                <h1>Register</h1>
+                <input type="text" id="regUsername" placeholder="Username" required><br>
+                <input type="email" id="regEmail" placeholder="Email" required><br>
+                <input type="password" id="regPassword" placeholder="Password" required><br>
+                <input type="submit" value="Register">
+                <p>After registering, log-in to ensure the account.</p>
+            </fieldset>
+        </form>
+    </div>
+    <script src="jhj_taxi_operators_js.js"></script>
+</body>
+</html>

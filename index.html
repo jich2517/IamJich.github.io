@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="JHJ_TAXI_OPERATORS_HTML/CSS/jhj_taxi_operators.css">
+    <title>Welcome</title>
+</head>
+<body>
+    <div class="main-container">
+        <img src="JHJ_TAXI_OPERATORS_HTML/Images/jhj_logo_transparent.png" alt="jhj_logo" class="welcome_logo">
+        <div class="content" id="content"></div>
+            <h1>JHJ Taxi Operators</h1>
+            <h3>Choose a theme and mode to customize your experience!</h3>
+            <!-- Button container for theme selection -->
+            <div class="button-container">
+                <button class="theme-button green-apple-btn" onclick="changeTheme('green-apple')">Green Apple</button>
+                <button class="theme-button lavender-btn" onclick="changeTheme('lavender')">Lavender</button>
+                <button class="theme-button yotsuba-btn" onclick="changeTheme('yotsuba')">Yotsuba</button>
+            </div>
+
+            <!-- Dark Mode and Light Mode Buttons -->
+            <div class="button-container">
+                <button class="mode-button light-mode-button" onclick="setLightMode()">Light Mode</button>
+                <button class="mode-button" onclick="setDarkMode()">Dark Mode</button>
+            </div>
+            <div class="content" id="content">
+                <h1>Enter. Record. Save.</h1>
+                <a href="JHJ_TAXI_OPERATORS_HTML/jhj_log_in.html"><button class="action-button">LOG-IN</button></a>
+                <a href="JHJ_TAXI_OPERATORS_HTML/jhj_sign-in.html"><button class="action-button">Sign-In</button></a>
+            </div>
+        </div>
+    <script src="JHJ_TAXI_OPERATORS_HTML/jhj_taxi_operators_js.js"></script>
+</body>
+</html>

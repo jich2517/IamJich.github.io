@@ -1,0 +1,674 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s ease;
+}
+
+/* Container for the main content */
+.main-container {
+    margin: 20px auto; /* Reduced vertical margin */
+    width: 80%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-align: center;
+}
+
+/* Logo styling */
+.welcome_logo {
+    height: 2in;
+    width: 2in;
+    border-radius: 10px;
+    transition: border-color 0.3s ease;
+    margin-bottom: 10px; /* Reduce space under the logo */
+}
+
+/* Adjust container for dark mode */
+body.dark-mode .main-container {
+    background-color: black; /* Change container background for dark mode */
+    color: white; /* Ensure text is white inside dark mode container */
+}
+
+/* Adjust logo border for dark mode */
+body.dark-mode .welcome_logo {
+    border: 2px solid white;
+}
+
+/* Container for theme buttons */
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px; /* Reduce space above buttons */
+}
+
+/* Theme buttons styling */
+.theme-button {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    border: 2px solid black;
+    cursor: pointer;
+    transition: transform 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: white;
+    font-size: 14px;
+}
+
+.theme-button:hover {
+    transform: scale(1.1);
+}
+
+/* Dark Mode and Light Mode Buttons */
+.mode-button {
+    padding: 10px 20px;
+    margin: 20px 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.light-mode-button {
+    background-color: #f0f0f0;
+    color: black;
+}
+
+/* Theme Colors */
+/* Green Apple Theme */
+.green-apple-btn {
+    background-color: #4caf50;
+    border: 2px solid #1d5e24;
+}
+
+/* Lavender Theme */
+.lavender-btn {
+    background-color: #8a2be2;
+    border: 2px solid #4b0082;
+}
+
+/* Yotsuba Theme */
+.yotsuba-btn {
+    background-color: #f5e942;
+    border: 2px solid #d4af37;
+    color: black;
+}
+
+/* Outer background color will change based on the theme */
+body.green-apple-theme {
+    background-color: #4caf50;
+}
+
+body.lavender-theme {
+    background-color: #8a2be2;
+}
+
+body.yotsuba-theme {
+    background-color: #f5e942;
+}
+
+/* Ensure button contrast is maintained */
+body.green-apple-theme .green-apple-btn {
+    border-color: white;
+}
+
+body.lavender-theme .lavender-btn {
+    border-color: white;
+}
+
+body.yotsuba-theme .yotsuba-btn {
+    border-color: black;
+}
+
+/* Logo border colors */
+body.green-apple-theme .welcome_logo {
+    border: 2px solid #1d5e24;
+}
+
+body.lavender-theme .welcome_logo {
+    border: 2px solid #4b0082;
+}
+
+body.yotsuba-theme .welcome_logo {
+    border: 2px solid #d4af37;
+}
+
+.action-button {
+    padding: 10px 20px;
+    margin: 10px;
+    border: 2px solid;
+    background-color: currentColor; /* Background color based on text color */
+    color: white; /* Default text color */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: color 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* Dark Mode and Light Mode Text Colors */
+body.dark-mode .action-button {
+    color: white;
+}
+
+body.light-mode .action-button {
+    color: black;
+}
+
+/* Hover effect for action buttons */
+.action-button:hover {
+    background-color: transparent;
+    color: currentColor;
+    border-color: currentColor;
+}
+
+/* Theme-based button colors */
+body.green-apple-theme .action-button {
+    background-color: #4caf50;
+    border-color: #1d5e24;
+}
+
+body.lavender-theme .action-button {
+    background-color: #8a2be2;
+    border-color: #4b0082;
+}
+
+body.yotsuba-theme .action-button {
+    background-color: #f5e942;
+    border-color: #d4af37;
+    color: black; /* Override text color for Yotsuba theme */
+}
+
+/*---------LOG-IN--------------*/
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    color: white; /* Default text color */
+    height: 0.5in;
+    padding: 10px;
+    position: relative;
+    z-index: 10;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.header img.logo {
+    width: 0.5in;
+    height: 0.5in;
+}
+
+.header h1 {
+    margin-left: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.header .dropdowns {
+    display: flex;
+    gap: 10px;
+}
+
+.header .nav {
+    display: flex;
+    justify-content: space-evenly;
+    flex: 1;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 60px); /* Adjust height for header */
+    padding: 20px;
+    background-image: url(jhj_logo_transparent.png);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: background-color 0.3s ease;
+}
+
+/* Form styling */
+form {
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+}
+
+fieldset.login_signin {
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Light Mode Styling */
+body.light-mode .header {
+    color: black; /* Change text color for light mode */
+}
+
+body.light-mode .main {
+    background-color: #ffffff;
+}
+
+body.light-mode .login_signin {
+    background-color: #ffffff;
+    color: black;
+}
+
+body.light-mode input[type="text"], 
+body.light-mode input[type="password"],
+body.light-mode input[type="email"],
+body.light-mode input[type="number"],
+body.light-mode input[type="tel"] {
+    background-color: #f0f0f0;
+    border: none;
+    font-size: 20px;
+    outline: none;
+    color: black;
+    margin-top: 20px;
+    text-align: center;
+    caret-color: red;
+    border-bottom: 2px solid black;
+}
+
+body.light-mode input[type="text"]::placeholder, 
+body.light-mode input[type="password"]::placeholder,
+body.light-mode input[type="email"]::placeholder,
+body.light-mode input[type="number"]::placeholder,
+body.light-mode input[type="tel"]::placeholder  {
+    color: #333;
+    background-color: white;
+    text-align: center;
+}
+
+body.light-mode a {
+    color: blue;
+}
+
+/* Dark Mode Styling */
+body.dark-mode .header {
+    color: white; /* Change text color for dark mode */
+}
+
+body.dark-mode .main {
+    background-color: #121212;
+}
+
+body.dark-mode .login_signin {
+    background-color: #333;
+    color: white;
+}
+
+body.dark-mode input[type="text"], 
+body.dark-mode input[type="password"],
+body.dark-mode input[type="email"],
+body.dark-mode input[type="number"],
+body.dark-mode input[type="tel"] {
+    background-color: #1e1e1e;
+    color: white;
+    border: none;
+    font-size: 20px;
+    outline: none;
+    margin-top: 20px;
+    text-align: center;
+    caret-color: red;
+    border-bottom: 2px solid white;
+}
+
+body.dark-mode input[type="text"]::placeholder, 
+body.dark-mode input[type="password"]::placeholder,
+body.dark-mode input[type="email"]::placeholder,
+body.dark-mode input[type="number"]::placeholder,
+body.dark-mode input[type="tel"]::placeholder {
+    text-align: center;
+    color: white;
+    background-color: #333;
+}
+
+body.dark-mode a {
+    color: #66c0f4;
+}
+
+/* Theme-based header colors */
+body.green-apple-theme .header {
+    background-color: #4caf50;
+}
+
+body.lavender-theme .header {
+    background-color: #8a2be2;
+}
+
+body.yotsuba-theme .header {
+    background-color: #f5e942;
+}
+
+/* Add some space between dropdowns and form elements */
+.dropdowns {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+select {
+    padding: 5px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    margin-top: 5px;
+    padding: 5px;
+    border-radius: 10%;
+}
+
+body.green-apple-theme input[type="submit"] {
+    border: 2px solid #4caf50;
+}
+
+body.lavender-theme input[type="submit"] {
+    border: 2px solid #8a2be2;
+}
+
+body.yotsuba-theme input[type="submit"] {
+    border: 2px solid #f5e942;
+}
+
+body.green-apple-theme input[type="submit"]:hover {
+    background-color: #4caf50;
+    color: #f0f0f0;
+}
+
+body.lavender-theme input[type="submit"]:hover {
+    background-color:#8a2be2;
+    color: #f0f0f0;
+}
+
+body.yotsuba-theme input[type="submit"]:hover {
+    background-color: #f5e942;
+    color: #121212;
+}
+
+body.light-mode input[type="submit"] {
+    background-color: #f0f0f0;
+    color: #121212;
+}
+
+body.dark-mode input[type="submit"] {
+    background-color: #333;
+    color: #f0f0f0;
+}
+/*----------------HOMEPAGE----------------*/
+.home {
+    text-decoration: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.search-bar {
+    background-color: #333;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+}
+.header button {
+    background-color: #444;
+    border: none;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.header button:hover {
+    background-color: #666;
+}
+.theme-selector {
+    padding: 5px;
+}
+
+.profile {
+    height: 0.5in;
+    width: 0.5in;
+}
+
+.choices {
+    display: none; /* Hide choices by default */
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.container {
+    display: flex;
+    height: calc(100vh - 0.5in);
+    overflow: auto;
+    padding-left: 210px; /* Added padding to avoid content overlap */
+}
+.sidebar {
+    background-color: #2c2c2c;
+    width: 60px;
+    transition: width 0.3s ease;
+    overflow: hidden;
+    position: fixed;
+    left: 0;
+    top: 0.5in;
+    height: calc(100vh - 0.5in);
+    z-index: 1000;
+    margin-top: 50px;
+}
+.sidebar:hover {
+    width: 200px;
+}
+.sidebar a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-decoration: none;
+    color: white;
+    white-space: nowrap;
+}
+.sidebar a:hover {
+    background-color: #575757;
+    color: #f0f0f0;
+}
+.sidebar a i {
+    font-size: 20px;
+    margin-right: 10px;
+}
+.sidebar:hover a span {
+    display: inline;
+}
+.sidebar a span {
+    display: none;
+}
+.content {
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 60px); /* Adjust height for header */
+    padding: 20px;
+    transition: background-color 0.3s ease;
+}
+.toggle-button {
+    position: fixed;
+    width: 60px;
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1001;
+    margin-top: 3px;
+}
+.toggle-button:hover {
+    background-color: #666;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    border: 2px;
+}
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+h2 {
+    display: inline;
+}
+.add-button {
+    cursor: pointer;
+    margin-left: 10px;
+    color: blue;
+}
+.see-more {
+    cursor: pointer;
+    color: green;
+    text-decoration: underline;
+    margin-top: 10px;
+}
+
+.see-less {
+    cursor: pointer;
+    color: green;
+    text-decoration: underline;
+    margin-top: 10px;
+}
+
+fieldset {
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+legend {
+    font-weight: bold;
+}
+
+body.light-mode .container {
+    background-color: #ffffff;
+    color: black;
+}
+
+body.dark-mode .container {
+    background-color: #121212;
+    color: white;
+}
+
+body.green-apple-theme .sidebar {
+    background-color: #4caf50;
+}
+
+body.lavender-theme .sidebar {
+    background-color: #8a2be2;
+}
+
+body.yotsuba-theme .sidebar {
+    background-color: #f5e942;
+}
+
+body.green-apple-theme .content fieldset {
+    border: 2px solid #4caf50;
+}
+
+body.lavender-theme .content fieldset {
+    border: 2px solid #8a2be2;
+}
+
+body.yotsuba-theme .content fieldset {
+    border: 2px solid #f5e942;
+}
+
+body.green-apple-theme .toggle-button {
+    background-color: #4caf50;
+}
+
+body.lavender-theme .toggle-button {
+    background-color: #8a2be2;
+}
+
+body.yotsuba-theme .toggle-button {
+    background-color: #f5e942;
+}
+
+body.light-mode .home {
+    color: black;
+}
+
+body.dark-mode .home {
+    color: white;
+}
+
+/*---More Information---*/
+.more_info {
+    padding: 20px;
+}
+
+body.light-mode .more_info {
+    background-color: #ffffff;
+    color: black;
+}
+
+body.dark-mode .more_info {
+    background-color: #121212;
+    color: white;
+}
+
+/*--More for todays sched in home--*/
+.hidden { display: none; }
+
+/*--Image Gallery--*/
+img {
+    max-width: 500px;
+    max-height: 300px;
+}
+
+#gallery-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#counter {
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+body.green-apple-theme .img_btn {
+    background-color: #4caf50;
+    color: #f0f0f0;
+}
+
+body.lavender-theme .img_btn {
+    background-color: #8a2be2;
+    color: #f0f0f0;
+}
+
+body.yotsuba-theme .img_btn {
+    background-color: #f5e942;
+    color: #121212
+}
+
+/*--Driver Profile--*/
+.driver-profile img {
+    height: 1.5in;
+    width: 1.5in;
+}
+
+.drivers .driver-profile img {
+    height: 1in;
+    width: 1in;
+}
